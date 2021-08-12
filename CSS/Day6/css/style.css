@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'twayair';
+}
+
+#container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+nav {
+    height: 50px;
+    background-color: #000;
+}
+
+nav > ul {
+    list-style: none;
+    margin: 0;
+    padding: 3px;
+}
+
+nav > ul > li {
+    display: inline-block;
+    margin: 15px 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link, a:visited {
+    color: #fff;
+}
+a:active, a:hover {color: #ff0;}
