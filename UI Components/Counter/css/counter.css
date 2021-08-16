@@ -1,0 +1,30 @@
+h1.title {
+  font-size: 50px;
+  text-align: center;
+  color: #fac42f;
+}
+.container {
+  width: 800px;
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.counter {
+  font-size: 50px;
+  text-align: center;
+}
+#increase, #decrease {
+  width: 80px;
+  height: 80px;
+  font-size: 30px;
+  margin: 50px;
+  background-color: #fac42f;
+  border: none;
+  border-radius: 20px;
+}
+button {
+  border: 0;
+  cursor: pointer;
+  background-color: inherit;
+}
