@@ -1,3 +1,5 @@
+@import url(./layout_base.css);
+
 @font-face {
   font-family: 'twayair';
   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
@@ -61,6 +63,147 @@ img, a, fieldset {
   top: 0;
   left: 0;
 }
+
+input, select, textarea, button, form, img, label {
+  vertical-align: middle;
+}
+input[type=text], input[type=number], input[type=password], input[type=tel], input[type=emadil] {
+  box-sizing: border-box;
+  display: inline-block;
+  height: 45px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  line-height: normal;
+  font-size: 15px;
+}
+textarea {
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+input[type=radio].css-radio {
+  overflow: hidden;
+  position: absolute;
+  left: -1000px;
+  width: 1px;
+  height: 1px;
+}
+input[type=radio].css-radio + label {
+  display: inline-block;
+  padding-left: 20px !important;
+  margin-right: 20px;
+  background: url(../images/bg_radio.png) no-repeat 0 0;
+  cursor: pointer;
+  vertical-align: middle;
+  font-size: 15px;
+}
+input[type=radio].css-radio:checked + label {
+  background-position: 0 -50px;
+}
+input[type=checkbox].css-checkbox {
+  overflow: hidden;
+  position: absolute;
+  left: -1000px;
+  width: 1px;
+  height: 1px;
+}
+input[type=checkbox].css-checkbox + label {
+  display: inline-block;
+  height: 20px;
+  padding-left: 30px !important;
+  line-height: 20px !important;
+  background: url(../images/bg_checkbox.png) no-repeat 0 0;
+  background-size: 20px;
+  cursor: pointer;
+  vertical-align: middle;
+  font-size: 15px;
+}
+input[type=checkbox].css-checkbox:checked + label {
+  background-position: 0 -20px;
+}
+select {
+  -webkit-appearance: none;
+  height: 30px;
+  padding:0 5px;
+  border: 1px solid #ccc;
+}
+.select_common {
+  display: inline-block;
+  box-sizing: border-box;
+  position: relative;
+  width: 158px;
+  height: 35px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background: url(../images/ico_selectArr.png) no-repeat 100%;
+}
+.select_common select {
+  display: inline-block;
+  width: 185px;
+  height: 29px;
+  padding: 0 10px;
+  border: none;
+  background: none;
+  font-size: 15px;
+}
+input::-webkit-input-placeholder {
+  color: #999;
+}
+textarea::-webkit-input-placeholder {
+  color: #999;
+}
+table, thead, tbody, tfoot {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: none;
+}
+
+/* 서브 페이지 공통 */
+.location_area {
+  height: 445px;
+  background: url(../images/img_top2.jpg) no-repeat center bottom;
+}
+.location_area.member {
+  background: url(../images/img_top5.jpg) no-repeat center bottom;
+}
+.location_area.customer {
+  background: url(../images/img_top2.jpg) no-repeat center bottom;
+}
+.location_area.package {
+  background: url(../images/img_top3.jpg) no-repeat center bottom;
+}
+
+.location_area h2.tit_page {
+  padding: 250px 0 0 0;
+  margin: 0 50px;
+  border-bottom: 1px solid #ccc;
+  font: 30px "Arial Narrow";
+  color: #fff;
+  letter-spacing: 3px;
+}
+.location_area h2.tit_page .in {
+  /* 작은 대문자 */
+  font-variant: small-caps;
+}
+.location_area p.location {
+  padding: 20px 0 0 50px;
+  color: #fff;
+}
+.location_area p.location .path {
+  display: inline-block;
+  padding: 0 10px;
+}
+.location_area ul.page_menu {
+  display: none;
+}
+
+.bodytext_area {
+  box-sizing: border-box;
+  padding: 55px 50px 0;
+}
+
+
 /* 
   웹 접근성을 위한 skipnavi
   https://nuli.navercorp.com/community/article/1132804
@@ -581,4 +724,90 @@ h1.loginTit > a > img {
   background: #888 url(../images/ico_cellphone.png) no-repeat 15px 50%;
   background-size: 45px 45px;
 }
+/*
+    appearance
+    - 운영체제 및 브라우저에 기본적으로 설정되어 있는 테마를 기반으로 요소를 표현할 때 사용함
+    - 네이티브로 지원되는 모양을 해제하거나 추가할 때 사용
+    appearance: none; 원래 쓰이는 속성을 없앰
+*/
+.btnonoff_line {
+  width: 75%;
+  margin: 10px auto;
+  text-align: center;
+}
+.btnonoff_line .btn_onoff {
+  margin-left: 5px;
+  font-size: 14px;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 35px;
+  height: 22px;
+  margin: 0;
+  padding: 0;
+  border-radius: 16px;
+  background-color: #e5e5e5;
+  vertical-align: top;
+  /* div 원래 기능 삭제 */
+  appearance: none;
+  cursor: pointer;
+  z-index: 0;
+}
 
+.switch::before {
+  content:"";
+  position: absolute;
+  left: 1px;
+  top: 1px;
+  width: 33px;
+  height: 20px;
+  border-radius: 15px;
+  background-color: #fff;
+  z-index: 1;
+}
+.switch::after {
+  content:"";
+  position: absolute;
+  left: 1px; 
+  top: 1px;
+  width: 19px;
+  height: 19px;
+  border-radius: 20px;
+  background-color: #fff;
+  z-index: 2;
+  box-shadow: 0 2px 5px #999;
+}
+
+
+/* 회원가입 */
+.appForm {
+  margin: 40px auto 0;
+}
+.appForm .info_pilsoo {
+  position: relative;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #000;
+  font-size: 15px;
+  color: #000;
+}
+.appForm .pilsoo_item::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  left: 5px;
+  top: 0px;
+  width: 15px;
+  font-weight: bold;
+  font-size: 17px;
+  color: #f00;
+}
+.appForm .app_list {
+  padding: 10px 0;
+  border-top: 1px solid #ccc;
+}
+
+.appForm .app_list li {
+  padding: 8px 0;
+}
