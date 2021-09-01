@@ -147,6 +147,50 @@ select {
   background: none;
   font-size: 15px;
 }
+.btn_line {
+  text-align: center;
+  font-size: 0;
+}
+.btn_line a {
+  margin-left: 10px;
+}
+.btn_line a:first-child {
+  margin-left: 0;
+}
+.btn_basecolor {
+  display: inline-block;
+  width: 125px;
+  text-align: center;
+  height: 50px;
+  font-size: 20px;
+  line-height: 50px;
+  vertical-align: middle;
+  background: #384d75;
+  color: #fff !important;
+}
+.btn_srch {
+  display: inline-block;
+  width: 70px;
+  text-align: center;
+  height: 35px;
+  font-size: 14px;
+  line-height: 35px;
+  vertical-align: middle;
+  background: #384d75;
+  color: #fff !important;
+}
+.btn_bbs {
+  display: inline-block;
+  width: 70px;
+  text-align: center;
+  height: 35px;
+  font-size: 14px;
+  line-height: 35px;
+  vertical-align: middle;
+  background: #384d75;
+  color: #fff !important;
+}
+
 input::-webkit-input-placeholder {
   color: #999;
 }
@@ -793,7 +837,7 @@ h1.loginTit > a > img {
   color: #000;
 }
 .appForm .pilsoo_item::before {
-  content: "";
+  content: "*";
   display: inline-block;
   position: absolute;
   left: 5px;
@@ -803,11 +847,57 @@ h1.loginTit > a > img {
   font-size: 17px;
   color: #f00;
 }
+
 .appForm .app_list {
   padding: 10px 0;
   border-top: 1px solid #ccc;
 }
-
 .appForm .app_list li {
   padding: 8px 0;
+}
+.appForm .app_list li .tit_lbl {
+  position: relative;
+  float: left;
+  width: 150px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  line-height: 42px;
+  font-weight: bold;
+  font-size: 17px;
+  letter-spacing: -2px;
+}
+.appForm .app_list li .app_content {
+  float: right;
+  width: 770px;
+}
+.appForm .app_list li .app_content * {
+  vertical-align: middle;
+}
+.appForm .app_list li .app_content.email_area .ico_space {
+  display: inline-block;
+  padding-top: 15px;
+}
+.appForm .app_list li .select_common {
+  width: 160px;
+  height: 43px;
+}
+.appForm .app_list li .select_common select {
+  width: 200px;
+  height: 39px;
+}
+.appForm .app_list li .app_content.radio_area {
+  height: 45px;
+  box-sizing: border-box;
+  padding-top: 12px;
+}
+.appForm .app_list li .app_content.checkbox_area {
+  height: 45px;
+  box-sizing: border-box;
+  padding-top: 12px;
+}
+.appForm .app_list li textarea {
+  height: 245px;
+}
+.btn_line {
+  padding: 20px 0;
 }
