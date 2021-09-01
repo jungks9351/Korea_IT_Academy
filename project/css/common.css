@@ -824,7 +824,8 @@ h1.loginTit > a > img {
 }
 
 
-/* 회원가입 */
+/* 회원가입 (join.html) */
+
 .appForm {
   margin: 40px auto 0;
 }
@@ -900,4 +901,56 @@ h1.loginTit > a > img {
 }
 .btn_line {
   padding: 20px 0;
+}
+
+/* 회원 정보 수정 (mypage.html) */
+
+.myinfo dt {
+  width: 170px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  background-color: #000;
+  font-size: 18px;
+  color: #fff;
+}
+.myinfo dd {
+  border-top: 2px solid #000;
+}
+.regForm .reg_list {
+  padding: 10px 0 0;
+  background: url(../images/bg_reglist.png) repeat-y;
+}
+.regForm .reg_list li {
+  min-height: 60px;
+  padding: 0;
+  border-bottom: 1px solid #ccc;
+}
+.regForm .reg_list li .tit_lbl{
+  position: relative;
+  float: left;
+  width: 150px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  line-height: 60px;
+  font-weight: bold;
+  font-size: 16px;
+}
+.regForm .reg_list li .reg_content {
+  float: right;
+  width: 770px;
+  box-sizing: border-box;
+  padding-left: 20px;
+  padding-top: 25px;
+  font-size: 15px;
+}
+.regForm .reg_list li .reg_content * {
+  vertical-align: middle;
+}
+.regForm .reg_list li .reg_content.radio_area {
+  padding-top: 20px;
+}
+.regForm .reg_list li .reg_content .info_line {
+  padding: 5px 10px 5px 0;
+  font-size: 15px;
 }
