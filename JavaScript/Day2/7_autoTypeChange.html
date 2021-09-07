@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자동 타입 변환</title>
+</head>
+<body>
+  <h2>자동 타입 변환</h2>
+  <script>
+    'ues strict';
+    const a = 10 + '문자열'; // 숫자형 + 문자열형 -> 문자열형 10문자열
+    console.log(a);
+    const b = "3" * "5"; // 문자열형 * 문자열형 -> 숫자형 15
+    console.log(b);
+    const c = 10 - "🚀";
+    console.log(c); // 숫자형 - 문자열형 -> NaN
+  </script>
+</body>
+</html>

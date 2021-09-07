@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>심볼형</title>
+</head>
+<body>
+  <h2>심볼형</h2>
+  <script>
+    'use strict';
+    const symbol1 = Symbol('apple');
+    const symbol2 = Symbol('apple');
+    // 타입과 값이 모두 같으니를 비교
+    console.log(symbol1 === symbol2); // false
+
+    const symbol3 = Symbol('banana');
+    const symbol4 = symbol3;
+    console.log(symbol3 === symbol4); // true, 같은 주소를 저장
+  </script>
+</body>
+</html>
