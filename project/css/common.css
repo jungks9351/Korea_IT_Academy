@@ -490,6 +490,9 @@ header > .header_area > h1 > a {
 .rollbtnArea .rollingbtn li a {
   vertical-align: top;
 }
+.swiper-wrapper {
+  display: none;
+}
 
 .about_area h2 {
   padding: 55px 0 105px;
@@ -1414,6 +1417,7 @@ h1.loginTit > a > img {
   .main_rolling_mobile .swiper-container .swiper-wrapper .swiper-slide img {
     width: 100%;
   }
+  
 
   .main_rolling_mobile .swiper-pagination {
     width: auto;
