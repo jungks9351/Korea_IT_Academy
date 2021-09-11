@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문제2</title>
+  </head>
+  <body>
+    <h2>문제2</h2>
+    <script>
+      'use strict';
+      const name = String(prompt('이름을 입력하세요'));
+      const korean = Number(prompt('국어점수를 입력하세요'));
+      const math = Number(prompt('수학점수를 입력하세요'));
+      const english = Number(prompt('영어점수를 입력하세요'));
+
+      const total = korean + math + english;
+      const average = total / 3;
+      let grade;
+      if (average >= 90) {
+        grade = 'A';
+      } else if (average >= 80) {
+        grade = 'B';
+      } else if (average >= 70) {
+        grade = 'C';
+      } else if (average >= 60) {
+        grade = 'D';
+      } else {
+        grade = 'F';
+      }
+      console.log(`
+      ${name}의 성적표
+      국어점수: ${korean}
+      수학점수: ${math}
+      영어점수: ${english}
+      총점: ${total}
+      평균: ${average}
+      학점: ${grade}학점
+      `);
+    </script>
+  </body>
+</html>
