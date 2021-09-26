@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>객체 - 1</title>
+  </head>
+  <body>
+    <h2>객체 - 1</h2>
+    <script>
+      'ues strict';
+      const cat = {
+        name: '망고',
+        age: 9,
+        color: 'orange',
+        weight: 11,
+        family: '코리안숏컷',
+      };
+      console.log(cat.name);
+      console.log(cat.age);
+      console.log(cat.color);
+      console.log(cat.weight);
+      console.log(cat.family);
+
+      for (let i in cat) {
+        console.log(i, cat[i]);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>클래스</title>
+  </head>
+  <body>
+    <h2>클래스</h2>
+    <script>
+      'use strict';
+      const Cat = class {
+        constructor(name, age, color) {
+          this.name = name;
+          this.age = age;
+          this.color = color;
+        }
+        play() {
+          return `${this.name}가(이) 즐겁게 놉니다`;
+        }
+      };
+
+      const mango = new Cat('망고', 9, '오렌지');
+      console.log(mango.name);
+      console.log(mango.age);
+      console.log(mango.color);
+      console.log(mango.play());
+
+      const Rucy = new Cat('루시', 11, '흰색');
+      console.log(Rucy.name);
+      console.log(Rucy.age);
+      console.log(Rucy.color);
+      console.log(Rucy.play());
+    </script>
+  </body>
+</html>
