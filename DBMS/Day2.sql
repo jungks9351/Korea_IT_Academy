@@ -160,19 +160,24 @@ from tb_member where mem_zipcode is null;
 select mem_idx, mem_userid, mem_name, mem_point, mem_zipcode, mem_address1, mem_address2, mem_address3
 from tb_member where mem_zipcode is not null;
 
+select mem_idx, mem_userid, mem_name, mem_point from tb_member where mem_userid in ('apple', 'orange', 'berry');
 
+-- SELECT 컬럼명1, 컬럼명2.. FROM 테이블 order by 정렬의 기준 되는 컬럼 asc 또는 desc
+-- 오름차순 정렬
+select mem_idx, mem_userid, mem_name, mem_point from tb_member order by mem_point;
+-- 오름차순 정렬
+select mem_idx, mem_userid, mem_name, mem_point from tb_member order by mem_point asc;
+-- 내림차순 정렬
+select mem_idx, mem_userid, mem_name, mem_point from tb_member order by mem_point desc;
 
+update tb_member set mem_point=1500 where mem_userid= 'orange';
 
+select * from tb_member;
 
+select mem_idx, mem_userid, mem_name, mem_point from tb_member order by mem_point desc, mem_idx desc;
 
+-- 성별 컬럼 추가
+-- enum 안의 값만 들어가야된다
+ALTER TABLE tb_member add mem_gender enum('남자', '여자');
 
-
-
-
-
-
-
-
-
-
-
+select * from tb_member;
