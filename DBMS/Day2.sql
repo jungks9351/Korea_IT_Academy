@@ -18,6 +18,7 @@
 
 USE frontend;
 
+
 -- 테이블 만들기
 create table tb_member(
 	mem_idx int auto_increment primary key,
@@ -181,3 +182,63 @@ select mem_idx, mem_userid, mem_name, mem_point from tb_member order by mem_poin
 ALTER TABLE tb_member add mem_gender enum('남자', '여자');
 
 select * from tb_member;
+
+-- 그룹
+-- select 그룹함수 또는 그룹을 맺은 컬럼 from 테이블 group by 컬럼명
+-- 그룹함수( sum(), avg(), max(), min(), count())
+select mem_gender from tb_member group by mem_gender;
+select mem_gender, count(mem_idx) from tb_member group by mem_gender;
+
+select mem_gender, count(mem_idx) as cnt from tb_member group by mem_gender;
+select mem_gender, count(mem_idx) cnt from tb_member group by mem_gender;
+
+select mem_gender, count(mem_idx) as cnt, sum(mem_point) as num, max(mem_point) as max, min(mem_point) as min, avg(mem_point) from tb_member group by mem_gender;
+
+-- select 그룹함수 또는 그룹을 맺은 컬럼 from 테이블명 where 조건절 group by 컬럼명 having 조건절 order by 정렬컬럼
+select mem_gender, count(mem_idx) as cnt from tb_member where mem_point > 0 group by mem_gender having mem_gender='남자';
+
+-- limit
+select mem_idx, mem_userid, mem_name, mem_point from tb_member limit 3; -- 처음부터 3개
+select mem_idx, mem_userid, mem_name, mem_point from tb_member limit 3,2; -- 처음부터 3개 다음 2개
+
+alter table tb_member drop mem_gender;
+
+create table tb_profile(
+	pro_useridx int not null,
+    pro_age int,
+    pro_birthday varchar(20),
+    pro_blood varchar(10),
+    foreign key(pro_useridx) references tb_member(mem_idx)
+);
+
+desc tb_profile;
+
+insert into tb_profile values (1, 20, '20001011', 'A형');
+
+select * from tb_profile;
+select * from tb_member;
+
+insert into tb_profile values (6, 30, '19951010', 'B형'); -- 외래키 제약 조건에 위배
+
+insert into tb_profile values (2, 23, '19991010', 'B형');
+insert into tb_profile values (3, 25, '19971111', 'O형');
+
+-- 테이블 병합 (JOIN)
+-- 데이터베이스 내의 여러 테이블에서 가져온 레코드를 조합하여 하나의 테이블이나 결과집합으로 표현
+-- inner join, left join, right join
+
+-- inner join
+select mem_idx, mem_userid, mem_name, pro_age, pro_birthday from tb_member inner join tb_profile
+on tb_member.mem_idx = tb_profile.pro_useridx;
+
+-- left join
+select mem_idx, mem_userid, mem_name, pro_age, pro_birthday from tb_member left join tb_profile
+on tb_member.mem_idx = tb_profile.pro_useridx;
+
+-- right join
+select mem_idx, mem_userid, mem_name, pro_age, pro_birthday from tb_member right join tb_profile
+on tb_member.mem_idx = tb_profile.pro_useridx;
+
+-- CRUD Create Read Update Delete
+
+
